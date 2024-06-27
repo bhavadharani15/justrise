@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+     <!----======== CSS ======== -->
+     <link rel="stylesheet" href="css/admin.css">
+
+     <!----===== Iconscout CSS ===== -->
+     
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <title>Admin Dashboard Panel</title>
+</head>
+<body>
+    <nav>
+        
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="img/Emma Stone.png" alt="">
+            </div>
+
+            <span class="logo_name">Lily Wilson</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="admin.html">
+                        <i class="fas fa-home"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="mailbox.html">
+                        <i class="fas fa-envelope"></i>
+                        <span class="link-name">Mailbox</span>
+                    </a></li>
+                <li><a href="file.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span class="link-name">File Manager</span>
+                    </a></li>
+                <li><a href="calender.html">
+
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="link-name">Calendar</span>
+                    </a></li>
+                <li><a href="todo.html">
+                        <i class="fas fa-list-ul"></i>
+                        <span class="link-name">To-Do</span>
+                    </a></li>
+
+            </ul>
+
+            <ul class="logout-mode">
+                
+                <li><a href="login.html" >
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="link-name"  >Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fas fa-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fas fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            <div class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+                <span class="tooltip">You have 3 new messages</span> <!-- Optional badge for unread notifications -->
+            </div>
+            <img src="img/Emma Stone.png" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <span class="text">Today's Sales</span>
+                        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/coins-7465543-6043900.png?f=webp"
+                            alt="dollar" height="50px" width="50px">
+                        <span class="number">1000</span>
+                        <p class="text">471 orders total</p>
+                    </div>
+                    <div class="box box2">
+                        <span class="text">Active Users</span>
+                        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/user-4906147-4124795.png?f=webp"
+                            alt="user" height="50px" width="70px">
+                        <span class="number">500</span>
+                        <p class="text">790 unique this month</p>
+                    </div>
+                    <div class="box box3">
+                        <span class="text">Downloads</span>
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-download-folder-1404293-1188162.png?f=webp"
+                            alt="Downloads" height="50px" width="50px">
+                        <span class="number">2000</span>
+                        <p class="text">87 items downloaded</p>
+                    </div>
+                    <div class="box task-container1">
+                        <div class="text header">
+                            <h2 class="text">Active Tasks</h2>
+                            <span>14 completed</span>
+                        </div>
+                        <div class="sub-header">
+                            <span>showing 5 out of 23 active tasks.</span>
+                        </div>
+                        <div class="tasks">
+                            <div class="task">
+                                <div class="icon" style="background-color: #d1e7dd;">&#128736;</div>
+                                <div class="details">
+                                    <p class="text task-title">Dashboard UI optimisations</p>
+                                    <p class="task-owner">Oskar Hudson</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="icon" style="background-color: #e7d1dd;">&#128231;</div>
+                                <div class="details">
+                                    <p class="text task-title">Mailbox cleanup</p>
+                                    <p class="task-owner">Woodrow Hawkins</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="icon" style="background-color: #d1e7f2;">&#128187;</div>
+                                <div class="details">
+                                    <p class="text task-title">Header scroll bugfix</p>
+                                    <p class="task-owner">Sky Meyers</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="icon" style="background-color: #fff3cd;">&#128295;</div>
+                                <div class="details">
+                                    <p class="text task-title">Localization for file manager</p>
+                                    <p class="task-owner">Oskar Hudson</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="icon" style="background-color: #f8d7da;">&#128722;</div>
+                                <div class="details">
+                                    <p class="text task-title">New E-commerce UX/UI design</p>
+                                    <p class="task-owner">Oskar Hudson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box task-container2">
+                        <div class="header">
+                            <h2 class="text">Todo</h2>
+                            <span>14 completed</span>
+                        </div>
+                        <div class="sub-header">
+                            <span>showing 5 out of 23 active tasks.</span>
+                        </div>
+                        <div class="tasks">
+                            <div class="task">
+                                <input type="checkbox" id="task1">
+                                <label for="task1">
+                                    <div class="details">
+                                        <p class="text task-title">Dashboard UI optimisations</p>
+                                        <p class="task-owner">Oskar Hudson</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="task">
+                                <input type="checkbox" id="task2" checked>
+                                <label for="task2">
+                                    <div class="details">
+                                        <p class="text task-title">Mailbox cleanup</p>
+                                        <p class="task-owner">Woodrow Hawkins</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="task">
+                                <input type="checkbox" id="task3" checked>
+                                <label for="task3">
+                                    <div class="details">
+                                        <p class="text task-title">Header scroll bugfix</p>
+                                        <p class="task-owner">Sky Meyers</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="task">
+                                <input type="checkbox" id="task4">
+                                <label for="task4">
+                                    <div class="details">
+                                        <p class="text task-title">Localization for file manager</p>
+                                        <p class="task-owner">Oskar Hudson</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="task">
+                                <input type="checkbox" id="task5" checked>
+                                <label for="task5">
+                                    <div class="details">
+                                        <p class="text task-title">New E-commerce UX/UI design</p>
+                                        <p class="task-owner">Oskar Hudson</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box task-container3">
+                        <div class="header">
+                            <h2 class="text">In Progress Tasks</h2>
+                            <span>37% total</span>
+                        </div>
+                        <div class="sub-header">
+                            <span>showing 5 out of 9 in progress tasks.</span>
+                        </div>
+                        <div class="tasks">
+                            <div class="task">
+                                <div class="icon" style="background-color: #d1e7dd;">&#128736;</div>
+                                <div class="details">
+                                    <p class="text">Dashboard UI optimisations</p>
+                                    <div class="progress-bar" style="width: 80%; background-color: #0d6efd;"></div>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="icon" style="background-color: #e7d1dd;">&#128231;</div>
+                                <div class="details">
+                                    <p class="text">Mailbox cleanup</p>
+                                    <div class="progress-bar" style="width: 60%; background-color: #6610f2;"></div>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="icon" style="background-color: #d1e7f2;">&#128187;</div>
+                                <div class="details">
+                                    <p class="text">Header scroll bugfix</p>
+                                    <div class="progress-bar" style="width: 40%; background-color: #6c757d;"></div>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="icon" style="background-color: #fff3cd;">&#128295;</div>
+                                <div class="details">
+                                    <p class="text">Localization for file manager</p>
+                                    <div class="progress-bar" style="width: 50%; background-color: #ffc107;"></div>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="icon" style="background-color: #f8d7da;">&#128722;</div>
+                                <div class="details">
+                                    <p class="text">New E-commerce UX/UI design</p>
+                                    <div class="progress-bar" style="width: 30%; background-color: #dc3545;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chart" class="chart "></div>
+                    <div class="report">
+                        <h2 >Report</h2>
+                        <p >Duis fringilla eget velit sit amet lobortis. Donec rutrum, arcu auctor varius cursus, mi
+                            nulla dapibus justo, at volutpat libero</p>
+                        <div class="report-item">
+                            <span >Neptune - v1.0</span>
+                            <div class="status status-up">
+                                <span >14%</span>
+                                <span>⬆</span>
+                            </div>
+                        </div>
+                        <div class="report-item">
+                            <span >Space - v1.2</span>
+                            <div class="status status-down">
+                                <span>7%</span>
+                                <span>⬇</span>
+                            </div>
+                        </div>
+                        <div class="report-item">
+                            <span >Limé - v1.0.3</span>
+                            <div class="status status-up">
+                                <span>21%</span>
+                                <span>⬆</span>
+                            </div>
+                        </div>
+                        <div class="report-item">
+                            <span >Cirel - v2.3</span>
+                            <div class="status status-up">
+                                <span>17%</span>
+                                <span>⬆</span>
+                            </div>
+                        </div>
+                        <div class="report-item">
+                            <span >Connect - v1.7</span>
+                            <div class="status status-down">
+                                <span>3%</span>
+                                <span>⬇</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        var options = {
+          series: [{
+          name: 'Net Profit',
+          data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+        }, {
+          name: 'Revenue',
+          data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+        }, {
+          name: 'Free Cash Flow',
+          data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+        }],
+          chart: {
+          type: 'bar',
+          height: 350
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+        },
+        xaxis: {
+          categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+         
+        },
+        yaxis: {
+          title: {
+            text: '$ (thousands)'
+          }
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return "$ " + val + " thousands"
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      
+      
+    
+    </script>
+    
+    <script src="script.js"></script>   
+</body>
+</html>
+
+

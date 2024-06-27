@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script>
+    
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="img-container">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/girl-is-working-on-laptop-on-online-certificate-10632860-8649638.png?f=webp" alt="girl" height="500px" width="550px">
+        </div>
+        <div class="login-container">
+            <h1>Login</h1>
+            <p>Please Login to your account and continue to the dashboard.</p>
+            <form onsubmit="handleFormSubmit(event)">
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email" placeholder="info@gmail.com"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+                <center><input type="submit"  value="Sign in " onclick="navigateToPage()" ></center>
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </form>
+            <p>Don't have an account? <a class="sign-up" href="signup.html" style="color: rgb(83, 10, 167);text-decoration: none;">Sign Up</a></p>
+            <hr style="border: 1px solid #909bfa; margin: 20px 0;">
+            <div class="social-icons">
+                <a href="#" class="google-icon">
+                    <img src="https://www.svgrepo.com/show/332087/google-circle.svg" alt="google" height="50px" width="50px">
+                </a>
+                <a href="#" class="facebook-icon">
+                    <img src="https://www.svgrepo.com/show/333535/facebook-circle.svg" alt="facebook" height="50px" width="50px">
+                </a>
+                <a href="#" class="twitter-icon">
+                    <img src="https://www.svgrepo.com/show/125065/twitter-social-logotype.svg" alt="tiwtter" height="45px" width="45px">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+         function handleFormSubmit(event) {
+            event.preventDefault(); 
+            window.location.href = "admin.html";
+        }
+    </script>
+</body>
+</html>

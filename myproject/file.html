@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Management UI</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <nav>
+
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="img/Emma Stone.png" alt="">
+            </div>
+
+            <span class="logo_name">Lily Wilson</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="admin.html">
+                        <i class="fas fa-home"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="mailbox.html">
+                        <i class="fas fa-envelope"></i>
+                        <span class="link-name">Mailbox</span>
+                    </a></li>
+                <li><a href="file.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span class="link-name">File Manager</span>
+                    </a></li>
+                <li><a href="calender.html">
+
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="link-name">Calendar</span>
+                    </a></li>
+                <li><a href="todo.html">
+                        <i class="fas fa-list-ul"></i>
+                        <span class="link-name">To-Do</span>
+                    </a></li>
+
+            </ul>
+
+            <ul class="logout-mode">
+
+                <li><a href="login.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fas fa-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fas fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            <div class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+                <span class="tooltip">You have 3 new messages</span> <!-- Optional badge for unread notifications -->
+            </div>
+            <img src="img/Emma Stone.png" alt="">
+        </div>
+    <div class="container3" style="margin-top: 50px;">
+        <aside class="sidebar">
+            <h3>Quick Access</h3>
+            <ul>
+                <li class="sidebar-item" data-files="my-design"><i class="fas fa-folder"></i><a href="#"> My Design</a></li>
+                <li class="sidebar-item" data-files="old-files"><i class="fas fa-folder"></i><a href="#"> Old Files</a></li>
+            </ul>
+            <h3>Categories</h3>
+            <ul>
+                <li class="sidebar-item" data-files="documents"><i class="fas fa-file-alt"></i><a href="#"> Documents</a></li>
+                <li class="sidebar-item" data-files="pictures"><i class="fas fa-camera"></i><a href="#"> Pictures</a></li>
+                <li class="sidebar-item" data-files="audio"><i class="fas fa-music"></i><a href="#"> Audio</a></li>
+                <li class="sidebar-item" data-files="videos"><i class="fas fa-video"></i><a href="#"> Videos</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <div class="breadcrumb">
+                <span>Desktop ></span>
+                <span> My Design</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="folder-grid" id="folder-grid">
+                <!-- Folders will be dynamically inserted here -->
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
+    const folderGrid = document.getElementById('folder-grid');
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
+
+    const fileData = {
+        'my-design': [
+            { name: 'PSD Files', icon: 'fas fa-folder' },
+            { name: 'Old Projects', icon: 'fas fa-folder' },
+            { name: 'Game Design', icon: 'fas fa-folder' }
+        ],
+        'old-files': [
+            { name: '2019 Files', icon: 'fas fa-folder' },
+            { name: '2020 Files', icon: 'fas fa-folder' },
+            { name: '2021 Files', icon: 'fas fa-folder' }
+        ],
+        'documents': [
+            { name: 'Report.docx', icon: 'fas fa-file-word' },
+            { name: 'Thesis.pdf', icon: 'fas fa-file-pdf' },
+            { name: 'Budget.xlsx', icon: 'fas fa-file-excel' }
+        ],
+        'pictures': [
+            { name: 'Vacation.jpg', icon: 'fas fa-image' },
+            { name: 'Family.png', icon: 'fas fa-image' },
+            { name: 'Friends.bmp', icon: 'fas fa-image' }
+        ],
+        'audio': [
+            { name: 'Song.mp3', icon: 'fas fa-music' },
+            { name: 'Podcast.wav', icon: 'fas fa-music' },
+            { name: 'Lecture.aac', icon: 'fas fa-music' }
+        ],
+        'videos': [
+            { name: 'Movie.mp4', icon: 'fas fa-video' },
+            { name: 'Tutorial.mkv', icon: 'fas fa-video' },
+            { name: 'Clip.avi', icon: 'fas fa-video' }
+        ]
+    };
+
+    sidebarItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const filesKey = this.getAttribute('data-files');
+            const files = fileData[filesKey];
+            folderGrid.innerHTML = '';  // Clear the current content
+
+            files.forEach(file => {
+                const folderDiv = document.createElement('div');
+                folderDiv.classList.add('folder');
+                folderDiv.innerHTML = `<i class="${file.icon}"></i><p>${file.name}</p>`;
+                folderGrid.appendChild(folderDiv);
+            });
+        });
+    });
+
+    searchButton.addEventListener('click', function() {
+        const query = searchInput.value.toLowerCase();
+        const folders = document.querySelectorAll('.folder');
+        
+        folders.forEach(folder => {
+            const folderName = folder.querySelector('p').textContent.toLowerCase();
+            if (folderName.includes(query)) {
+                folder.style.display = 'block';
+            } else {
+                folder.style.display = 'none';
+            }
+        });
+    });
+});
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

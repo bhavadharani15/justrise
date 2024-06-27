@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="img/Emma Stone.png" alt="">
+            </div>
+
+            <span class="logo_name">Lily Wilson</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="admin.html">
+                        <i class="fas fa-home"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="mailbox.html">
+                        <i class="fas fa-envelope"></i>
+                        <span class="link-name">Mailbox</span>
+                    </a></li>
+                <li><a href="file.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span class="link-name">File Manager</span>
+                    </a></li>
+                <li><a href="calender.html">
+
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="link-name">Calendar</span>
+                    </a></li>
+                <li><a href="todo.html">
+                        <i class="fas fa-list-ul"></i>
+                        <span class="link-name">To-Do</span>
+                    </a></li>
+
+            </ul>
+
+            <ul class="logout-mode">
+                
+                <li><a href="login.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fas fa-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fas fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            <div class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+                <span class="tooltip">You have 3 new messages</span> <!-- Optional badge for unread notifications -->
+            </div>
+            <img src="img/Emma Stone.png" alt="">
+        </div>
+        <div class="dash-content" style="margin-top: 70px;">
+            <div class="boxes">
+
+                <div class="box task-container1">
+                    <div class="text header">
+                        <h2 class="text">Active Tasks</h2>
+                        <span>14 completed</span>
+                    </div>
+                    <div class="sub-header">
+                        <span>showing 5 out of 23 active tasks.</span>
+                    </div>
+                    <div class="tasks">
+                        <div class="task">
+                            <div class="icon" style="background-color: #d1e7dd;">&#128736;</div>
+                            <div class="details">
+                                <p class="text task-title">Dashboard UI optimisations</p>
+                                <p class="task-owner">Oskar Hudson</p>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="icon" style="background-color: #e7d1dd;">&#128231;</div>
+                            <div class="details">
+                                <p class="text task-title">Mailbox cleanup</p>
+                                <p class="task-owner">Woodrow Hawkins</p>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="icon" style="background-color: #d1e7f2;">&#128187;</div>
+                            <div class="details">
+                                <p class="text task-title">Header scroll bugfix</p>
+                                <p class="task-owner">Sky Meyers</p>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="icon" style="background-color: #fff3cd;">&#128295;</div>
+                            <div class="details">
+                                <p class="text task-title">Localization for file manager</p>
+                                <p class="task-owner">Oskar Hudson</p>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="icon" style="background-color: #f8d7da;">&#128722;</div>
+                            <div class="details">
+                                <p class="text task-title">New E-commerce UX/UI design</p>
+                                <p class="task-owner">Oskar Hudson</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box task-container2">
+                    <div class="header">
+                        <h2 class="text">Todo</h2>
+                        <span>14 completed</span>
+                    </div>
+                    <div class="sub-header">
+                        <span>showing 5 out of 23 active tasks.</span>
+                    </div>
+                    <div class="tasks">
+                        <div class="task">
+                            <input type="checkbox" id="task1">
+                            <label for="task1">
+                                <div class="details">
+                                    <p class="text task-title">Dashboard UI optimisations</p>
+                                    <p class="task-owner">Oskar Hudson</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="task">
+                            <input type="checkbox" id="task2" checked>
+                            <label for="task2">
+                                <div class="details">
+                                    <p class="text task-title">Mailbox cleanup</p>
+                                    <p class="task-owner">Woodrow Hawkins</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="task">
+                            <input type="checkbox" id="task3" checked>
+                            <label for="task3">
+                                <div class="details">
+                                    <p class="text task-title">Header scroll bugfix</p>
+                                    <p class="task-owner">Sky Meyers</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="task">
+                            <input type="checkbox" id="task4">
+                            <label for="task4">
+                                <div class="details">
+                                    <p class="text task-title">Localization for file manager</p>
+                                    <p class="task-owner">Oskar Hudson</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="task">
+                            <input type="checkbox" id="task5" checked>
+                            <label for="task5">
+                                <div class="details">
+                                    <p class="text task-title">New E-commerce UX/UI design</p>
+                                    <p class="task-owner">Oskar Hudson</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box task-container3">
+                    <div class="header">
+                        <h2 class="text">In Progress Tasks</h2>
+                        <span>37% total</span>
+                    </div>
+                    <div class="sub-header">
+                        <span>showing 5 out of 9 in progress tasks.</span>
+                    </div>
+                    <div class="tasks">
+                        <div class="task">
+                            <div class="icon" style="background-color: #d1e7dd;">&#128736;</div>
+                            <div class="details">
+                                <p class="text">Dashboard UI optimisations</p>
+                                <div class="progress-bar" style="width: 80%; background-color: #0d6efd;"></div>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="icon" style="background-color: #e7d1dd;">&#128231;</div>
+                            <div class="details">
+                                <p class="text">Mailbox cleanup</p>
+                                <div class="progress-bar" style="width: 60%; background-color: #6610f2;"></div>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="icon" style="background-color: #d1e7f2;">&#128187;</div>
+                            <div class="details">
+                                <p class="text">Header scroll bugfix</p>
+                                <div class="progress-bar" style="width: 40%; background-color: #6c757d;"></div>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="icon" style="background-color: #fff3cd;">&#128295;</div>
+                            <div class="details">
+                                <p class="text">Localization for file manager</p>
+                                <div class="progress-bar" style="width: 50%; background-color: #ffc107;"></div>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="icon" style="background-color: #f8d7da;">&#128722;</div>
+                            <div class="details">
+                                <p class="text">New E-commerce UX/UI design</p>
+                                <div class="progress-bar" style="width: 30%; background-color: #dc3545;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

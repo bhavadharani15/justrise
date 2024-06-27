@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Page</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+</head>
+
+<body>
+    <nav>
+
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="img/Emma Stone.png" alt="">
+            </div>
+
+            <span class="logo_name">Lily Wilson</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="admin.html">
+                        <i class="fas fa-home"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="mailbox.html">
+                        <i class="fas fa-envelope"></i>
+                        <span class="link-name">Mailbox</span>
+                    </a></li>
+                <li><a href="file.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span class="link-name">File Manager</span>
+                    </a></li>
+                <li><a href="calender.html">
+
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="link-name">Calendar</span>
+                    </a></li>
+                <li><a href="todo.html">
+                        <i class="fas fa-list-ul"></i>
+                        <span class="link-name">To-Do</span>
+                    </a></li>
+
+            </ul>
+
+            <ul class="logout-mode">
+
+                <li><a href="login.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fas fa-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fas fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            <div class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+                <span class="tooltip">You have 3 new messages</span> <!-- Optional badge for unread notifications -->
+            </div>
+            <img src="img/Emma Stone.png" alt="">
+        </div>
+
+        <header>
+            <div class="logo">Mailbox</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search mail">
+            </div>
+            <div class="user-info">
+                <span>Lily</span>
+                <img src="img/Emma Stone.png" alt="User Avatar">
+            </div>
+        </header>
+        <div class="container">
+            <aside class="sidebar">
+                <button class="compose-btn"><i class="fas fa-pencil-alt"></i> Compose</button>
+                <ul class="menu">
+                    <li><i class="fas fa-inbox"></i> Inbox</li>
+                    <li><i class="fas fa-paper-plane"></i> Sent</li>
+                    <li><i class="fas fa-file-alt"></i> Drafts</li>
+                    <li><i class="fas fa-trash"></i> Trash</li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                <section class="email-list">
+                    <div class="email-item" data-subject="sheeran@gmail.com" data-content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum provident aliquam quibusdam nulla dolore possimus repellendus officia."
+                        data-sender-img="img/Ed Sheeran.png">
+                        <img src="img/Ed Sheeran.png" alt="Sender 1" class="sender-img">
+                        <div class="email-info">
+                            <div class="sender">sheeran</div>
+                            <div class="subject">sheeran@gmail.com</div>
+                            <div class="snippet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum provident aliquam quibusdam nulla dolore possimus repellendus officia.</div>
+                        </div>
+                        <div class="time">10:30 AM</div>
+
+                    </div>
+                    <div class="email-item" data-subject="Beyonce@gmail.com" data-content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum provident aliquam quibusdam nulla dolore possimus repellendus officia."
+                        data-sender-img="img/Beyonce Knowles.png">
+                        <img src="img/Beyonce Knowles.png" alt="Sender 2" class="sender-img">
+                        <div class="email-info">
+                            <div class="sender">Beyonce</div>
+                            <div class="subject">Beyonce@gmail.com</div>
+                            <div class="snippet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum provident aliquam quibusdam nulla dolore possimus repellendus officia.</div>
+                        </div>
+                        <div class="time">11:00 AM</div>
+                    </div>
+                    <div class="email-item" data-subject="Malala@gmail.com" data-content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum provident aliquam quibusdam nulla dolore possimus repellendus officia."
+                        data-sender-img="img/Malala Yousafzai.png">
+                        <img src="img/Malala Yousafzai.png" alt="Sender 2" class="sender-img">
+                        <div class="email-info">
+                            <div class="sender">Malala</div>
+                            <div class="subject">Malala@gmail.com</div>
+                            <div class="snippet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum provident aliquam quibusdam nulla dolore possimus repellendus officia.</div>
+                        </div>
+                        <div class="time">9:00 AM</div>
+                    </div>
+                    <div class="email-item" data-subject="Beyonce@gmail.com" data-content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum provident aliquam quibusdam nulla dolore possimus repellendus officia."
+                        data-sender-img="img/Beyonce Knowles.png">
+                        <img src="img/Beyonce Knowles.png" alt="Sender 2" class="sender-img">
+                        <div class="email-info">
+                            <div class="sender">Beyonce</div>
+                            <div class="subject">Beyonce@gmail.com</div>
+                            <div class="snippet">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum provident aliquam quibusdam nulla dolore possimus repellendus officia.</div>
+                        </div>
+                        <div class="time">10:00 PM</div>
+                    </div>
+                    <!-- Repeat email-item divs for more emails -->
+                </section>
+                <section class="email-content">
+                    <div class="email-header">
+                        <img src="img/Emma Stone.png" alt="Sender" class="content-sender-img">
+                        <h2>Select an email to view its content</h2>
+                    </div>
+                    <p></p>
+                </section>
+
+            </main>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const emailItems = document.querySelectorAll('.email-item');
+                const emailContentSection = document.querySelector('.email-content');
+                const emailHeader = emailContentSection.querySelector('.email-header');
+                const emailSubject = emailHeader.querySelector('h2');
+                const emailBody = emailContentSection.querySelector('p');
+                const contentSenderImg = emailHeader.querySelector('.content-sender-img');
+                const emailComposer = document.querySelector('.email-composer');
+
+                emailItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        const subject = item.getAttribute('data-subject');
+                        const content = item.getAttribute('data-content');
+                        const senderImg = item.getAttribute('data-sender-img');
+                        emailSubject.textContent = subject;
+                        emailBody.textContent = content;
+                        contentSenderImg.src = senderImg;
+
+                        // Highlight selected email item
+                        emailItems.forEach(i => i.classList.remove('selected'));
+                        item.classList.add('selected');
+                    });
+                });
+
+                const composeBtn = document.querySelector('.compose-btn');
+                
+               
+                const messageInput = emailComposer.querySelector('.message-input');
+                const sendBtn = emailComposer.querySelector('.send-btn');
+
+
+            });
+
+        </script>
+        <script src="script.js"></script>
+</body>
+
+</html>
